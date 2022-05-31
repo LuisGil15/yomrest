@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #fc8b00;
+    height: 3rem;
+    width: calc(100% - 1rem);
+    align-items: center;
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+
+.navbarTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 1rem;
+}
+
+.btnLogout {
+    margin: 0;
+}
+
+.logoutIcon {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.dashboard {
+    display: flex;
+    flex: 1;
+    width: calc(100% - 4rem);
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboardContent {
+    display: block;
+    flex: 0.7;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.filterSearch {
+    display: flex;
+    align-items: center;
+    flex: 0.7;
+}
+
+.filterIcon {
+    color: rgb(107, 107, 107);
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    padding: 0;
+}
+
+.btnAdd {
+    background-color: #fc8b00;
+    height: calc(1.5em + 0.81rem);
+    margin-left: 1rem;
+    padding: 0.4rem;
+    flex: 0.4;
+    max-width: 20%;
+}
+
+.btnAdd:active {
+    background-color: #ffb253;
+}
+
+.formControlDash {
+    margin-bottom: 0;
+    margin-left: 1rem;
+    flex: 1;
+}
+
+table {
+    width: 100%;
+}
+
+.tableContent {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+tbody tr:hover {background-color: #f2f2f2;}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.tableContent thead tr {
+    padding: 1rem;
+}
+
+.tableContent th {
+    color: rgb(107, 107, 107);
+    font-weight: bold;
+    text-align: center;
+}
+
+.btnIcon {
+    color: #fc8b00;
+    font-size: 1rem;
+    background-color: rgba(1, 1, 1, 0);
+    margin: 0.5rem;
+    border-color: none;
+    border-width: 0;
+    cursor: pointer;
+}
+
+.btnIcon:hover {
+    transform: scale(1.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+li {
+    list-style: none;
+    border: 1px solid #fc8b00;
+    width: 2rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0.2rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+}
+
+li a {
+    text-decoration: none;
+    color: #fc8b00;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.active {
+    background-color: #fc8b00;
+    border: 1px solid #fc8b00;
+}
+
+.active a {
+    color: #fff;
+}
+
+ul .disabled {
+    border: 1px solid #ccc;
+}
+
+ul .disabled a {
+    color: #ccc;
+}
+
+.indexNext {
+    width: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 800px) {
+    .dashboard {
+        padding: 0.5rem;
+        padding-top: 1rem;
+        display: flex;
+        width: calc(100% - 1rem);
+    }
+
+    .dashboardContent {
+        display: block;
+        flex: 0.7;
+        max-width: 100%;
+    }
+
+    .filter {
+        max-width: 100%;
+    }
+
+    .btnAdd {
+        max-width: 100%;
+    }
+
+    .tableContainer {
+        width: 100%;
+    }
+
+    .tableContent {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+}

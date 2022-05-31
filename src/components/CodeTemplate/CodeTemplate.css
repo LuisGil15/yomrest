@@ -1,0 +1,17 @@
+.modalContainer {
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.modalHeader {
+    background-color: #fc8b00;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.modalQr {
+    padding: 2rem;
+}

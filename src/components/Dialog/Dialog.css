@@ -1,0 +1,44 @@
+.dialogContainer {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.dialogTitle {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.btnZone {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.btnZone button {
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    background-color: #fff;
+    font-weight: 600;
+    border: 0px;
+    color: rgb(51, 106, 255);
+    cursor: pointer;
+}
+
+.dialogText {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+    .dialogContainer {
+        width: calc(100% - 1rem);
+        transform: translateX(-0.5em);
+    }
+
+    .btnZone button {
+        font-size: 1rem;
+    }
+}
