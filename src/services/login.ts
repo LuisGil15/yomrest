@@ -1,5 +1,5 @@
 import axios from 'axios';
-const apiUrl = "http://localhost:3001/api/login";
+const apiUrl = "https://secret-river-21821.herokuapp.com/api/login";
 
 const login = async (credentials: any) => {
     return axios.post(apiUrl, credentials).then((response: any) => {

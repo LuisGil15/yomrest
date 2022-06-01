@@ -1,5 +1,5 @@
 import axios from "axios";
-const apiUrl = "http://172.17.1.153:3001/api/local";
+const apiUrl = "https://secret-river-21821.herokuapp.com/api/local";
 
 export const getLocals = async (token: any) => {
     const config = {
