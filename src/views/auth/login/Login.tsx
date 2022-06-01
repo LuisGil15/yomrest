@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import Alert from "react-bootstrap/Alert";
+import {AiOutlineLoading3Quarters} from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { AlertContent } from "../../../interfaces/Content";
 import { setUser } from "../../../reducers/userReducer";
@@ -12,12 +13,14 @@ const Login = () => {
     const [alertContent, setAlertContent] = useState<AlertContent>({});
     const [userName, setUserName] = useState<string>("");
     const [password, setPassword] = useState<string>("");
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const dispatch = useDispatch();
     
     const handleLogin = (event: any) => {
         event.preventDefault();
 
         setAlertContent({});
+        setIsLoading(true);
 
         Promise.all([
             loginService.login({
@@ -44,6 +47,8 @@ const Login = () => {
                 message: error.message,
                 type: "danger"
             });
+        }).finally(() => {
+            setIsLoading(false);
         });
     }
 
@@ -105,6 +110,7 @@ const Login = () => {
                                 value={userName}
                                 onChange={(e) => setUserName(e.target.value)}
                                 required
+                                disabled={isLoading}
                             />
                             <input
                                 type="password"
@@ -115,10 +121,18 @@ const Login = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
+                                disabled={isLoading}
                             />
-                            <button type="submit" className="btn btnPrimary">
-                                INGRESAR
-                            </button>
+                            {isLoading ? (
+                                <AiOutlineLoading3Quarters className="loading" />
+                            ) : (
+                                <button
+                                    type="submit"
+                                    className="btn btnPrimary"
+                                >
+                                    INGRESAR
+                                </button>
+                            )}
                         </form>
                     </div>
                 </div>

@@ -91,6 +91,14 @@
     background-color: #ffb253;
 }
 
+.loginFormBody .loading {
+    position: relative;
+    margin-top: 1rem;
+    font-size: 2rem;
+    top: 0;
+    left: calc(50% - 1rem);
+}
+
 @media (max-width: 1080px) {
     .loginContainer {
         flex: 0.5;
