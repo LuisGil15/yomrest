@@ -6,6 +6,7 @@ const Dialog = (props: any) => {
     return (
         <Modal
             isOpen={props.isOpen ?? false}
+            ariaHideApp={false}
             style={{
                 overlay: {
                     backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -20,7 +21,7 @@ const Dialog = (props: any) => {
                     border: "none",
                     backgroundColor: "transparent",
                     boxShadow: "none",
-                    maxWidth: "70%"
+                    maxWidth: "70%",
                 },
             }}
             preventScroll={true}
@@ -32,10 +33,18 @@ const Dialog = (props: any) => {
                 <div className="dialogContent">{props.children}</div>
 
                 <div className="btnZone">
-                    {props.onSubmit &&
-                        <button onClick={() => props.onSubmit()}>Confirmar</button>
-                    }
-                    <button onClick={() => props.onCancel ? props.onCancel() : null}>Cancelar</button>
+                    {props.onSubmit && (
+                        <button onClick={() => props.onSubmit()}>
+                            Confirmar
+                        </button>
+                    )}
+                    <button
+                        onClick={() =>
+                            props.onCancel ? props.onCancel() : null
+                        }
+                    >
+                        Cancelar
+                    </button>
                 </div>
             </div>
         </Modal>

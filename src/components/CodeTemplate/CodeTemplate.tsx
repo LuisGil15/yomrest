@@ -8,6 +8,7 @@ const CodeTemplate = (props: any) => {
     return (
         <Modal
             isOpen={props.isOpen ?? false}
+            ariaHideApp={false}
             style={{
                 overlay: {
                     backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -22,17 +23,20 @@ const CodeTemplate = (props: any) => {
                     border: "none",
                     backgroundColor: "transparent",
                     boxShadow: "none",
-                }
+                },
             }}
             preventScroll={props.preventScroll ?? true}
-            onRequestClose={() => props.onClose ? props.onClose() : null}
+            onRequestClose={() => (props.onClose ? props.onClose() : null)}
         >
             <div className="modalContainer">
                 <div className="modalHeader">
                     <h1>{props.title || "Ejemplo"}</h1>
                 </div>
                 <div className="modalQr">
-                    <QRCode value={props.value || "www.google.com"} size={256} />
+                    <QRCode
+                        value={props.value || "www.google.com"}
+                        size={256}
+                    />
                 </div>
             </div>
         </Modal>

@@ -12,3 +12,9 @@ export interface CodeInfo {
     action?: string;
     contact?: string;
 }
+
+export interface AlertContent {
+    message?: string;
+    title?: string;
+    type?: string;
+}
